@@ -9,6 +9,14 @@
     "dist"
   ],
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/One-Bit-Nigeria/onebit-icons-react.git"
+  },
+  "homepage": "https://icons.onebit.ng",
+  "bugs": {
+    "url": "https://github.com/One-Bit-Nigeria/onebit-icons-react/issues"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "fix-icons": "node ./scripts/fix-svg-icons.js",
