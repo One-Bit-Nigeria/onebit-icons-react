@@ -1,0 +1,24 @@
+/* Import font files from onebit-icon-font package */
+@font-face {
+  font-family: "onebit-icon";
+  src: url("../../onebit-icon-font/build/onebit-icon.woff") format("woff"),
+       url("../../onebit-icon-font/build/onebit-icon.woff2") format("woff2"),
+       url("../../onebit-icon-font/build/onebit-icon.eot#iefix") format("embedded-opentype");
+}
+
+/* Base icon class */
+.onebit {
+  font-family: onebit-icon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Individual icons */
+.naicon--house:before {
+  content: "\f101";
+}

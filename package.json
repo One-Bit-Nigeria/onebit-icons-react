@@ -1,0 +1,44 @@
+{
+  "name": "onebit-icon-react",
+  "version": "1.0.5",
+  "description": "React components for Onebit Icons",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "fix-icons": "node ./scripts/fix-svg-icons.js",
+    "generate-wrapped-icons": "node ./scripts/generate-wrapped-icons.js",
+    "prebuild": "npm run generate-wrapped-icons",
+    "build": "npm run clean && npm run prebuild && rollup -c",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@svgr/rollup": "^8.1.0",
+    "@types/node": "^22.15.2",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "postcss": "^8.5.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-string": "^3.0.0",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}
